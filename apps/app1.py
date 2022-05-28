@@ -10,8 +10,7 @@ import tempfile
 
 MODEL = tf.keras.models.load_model("models/efficientnet_b0/model_final_101_recycling_fp32")
 
-pred = open("pred.txt", "w")
-acc = open("acc.txt", "w")
+
 
 def app():      
 
@@ -20,6 +19,9 @@ def app():
     btn = st.camera_input("")
 
     if btn:
+        pred = open("pred.txt", "w")
+        acc = open("acc.txt", "w")
+        
         user_inputs, confidence = run_algorithm(
             btn,
            )

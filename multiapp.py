@@ -38,7 +38,9 @@ class MultiApp:
 
     def run(self):
         # app = st.sidebar.radio(
-        st.header("Welcome to Plastic Pal!")
+        col1, col2, col3 = st.columns(3)
+        with col2:
+            st.image("./docs/logo.png", width=200)
         app = st.selectbox(
             'Navigation',
             self.apps,
