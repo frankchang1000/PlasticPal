@@ -2,3 +2,5 @@ tensorflow
 opencv-python
 matplotlib
 albumentations
+cv2
+python3-opencv
