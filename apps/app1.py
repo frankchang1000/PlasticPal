@@ -6,9 +6,12 @@ import numpy as np
 from dictionary import *
 import pandas as pd
 import cv2
+import tempfile
 
 MODEL = tf.keras.models.load_model("models/efficientnet_b0/model_final_101_recycling_fp32")
 
+pred = open("pred.txt", "w")
+acc = open("acc.txt", "w")
 
 def app():      
 
@@ -17,12 +20,21 @@ def app():
     btn = st.camera_input("")
 
     if btn:
-        user_inputs = run_algorithm(
+        user_inputs, confidence = run_algorithm(
             btn,
            )
 
         output = user_inputs
-        print(user_inputs)
+
+        pred.write(str(user_inputs))
+
+
+        confidence = float(confidence)
+        acc.write(str(confidence)[0:5])
+        acc.close()
+        pred.close()
+        """print(str(user_inputs))
+        print(str(confidence))"""
 
     
 def run_algorithm(button: bytes,
@@ -36,7 +48,8 @@ def run_algorithm(button: bytes,
     outputs = tf.squeeze(outputs, axis=0)
     index_val = tf.argmax(outputs, axis=0)
     label_val = LABELS[index_val-1]
-    return label_val
+    confidence = outputs[index_val]
+    return label_val, confidence
 
 def read_image(user_img):
     """Reads the image.

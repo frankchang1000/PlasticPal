@@ -5,10 +5,16 @@ import tensorflow as tf
 import numpy as np
 from dictionary import *
 import pandas as pd
+from apps import app1 as app1
 
 
 def app():      
 
-    st.write("APP2")
-    st.image()
+
+    pred = open("pred.txt", "r")
+    acc = open("acc.txt", "r")
+    st.write("Classified Object: " + pred.read())
+    st.write("Confidence: " + acc.read())
+    pred.close()
+    acc.close()
     
