@@ -12,3 +12,5 @@ for filename in os.listdir(directory):
         im.save(prefix+'.jpg')
     else:
         continue
+
+    
