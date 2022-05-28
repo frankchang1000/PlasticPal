@@ -11,7 +11,7 @@ MODEL = tf.keras.models.load_model("data/model_good")
 
 
 
-"""def main():      
+def main():      
     st.header("Welcome to Plastic Pal!")
 
     st.write("Please connect your camera to begin scanning items")
@@ -20,4 +20,3 @@ MODEL = tf.keras.models.load_model("data/model_good")
 
 if __name__ == '__main__':
     main()
-    """
