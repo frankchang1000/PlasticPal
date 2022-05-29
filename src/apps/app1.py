@@ -7,22 +7,22 @@ import numpy as np
 import streamlit as st
 import tensorflow as tf
 
-from main import MODEL
 from src.dictionary import *
 
+MODEL = tf.keras.models.load_model("models/efficientnet_b0/model_final_101_recycling_fp32")
 
-def app():
-    st.write("Please connect your camera to begin scanning items.")
+def app():      
+    st.write("Please connect your camera to begin scanning items")
     btn = st.camera_input("")
     if btn:
+        pred = open("users/pred.txt", "w")
+        acc = open("users/acc.txt", "w")
         user_inputs, confidence = run_algorithm(btn)
-        with open("users/pred.txt", "w") as pred:
-            pred.write(str(user_inputs))
+        pred.write(str(user_inputs))
         confidence = float(confidence)
-        with open("users/acc.txt", "w") as acc:
-            acc.write(str(confidence)[0:5])
-        # acc.close()
-        # pred.close()
+        acc.write(str(confidence)[0:5])
+        acc.close()
+        pred.close()
 
 
 def run_algorithm(button: bytes):
@@ -49,3 +49,4 @@ def read_image(user_img):
         bytes_data = user_img.getvalue()
         img_tensor = tf.io.decode_image(bytes_data, channels=3)
         return img_tensor
+
