@@ -6,6 +6,19 @@
 
 Promoting **proper** recycling with advanced AI.
 
+## Table of Contents
+
+* [Purpose and Inspiration](#purpose-and-inspiration)
+* [What it does](#what-it-does)
+* [Installation and Usage](#installation-and-usage)
+* [How we built it](#how-we-built-it)
+* [Challenges we ran into](#challenges-we-ran-into)
+* [Accomplisments we're proud of](#accomplishments-were-proud-of)
+* [What we learned](#what-we-learned)
+* [What's next for PlasticPal](#whats-next-for-plasticpal)
+* [References](#references)
+* [License](#license)
+
 ## Purpose and Inspiration
 
 <p align="center">
@@ -23,6 +36,19 @@ According to the Environmental Protection Agency, almost 300 million tons of was
 PlasticPal uses computer vision to determine if an item is recyclable. Then, our end-user can properly dispose of the item, helping to improve the environment and our recycling conditions.
 
 Plastic Pal takes an image from a camera input, and feeds the image to our EfficientNet model. The neural network classifies the image into one of 101 different categories, and is able to determine if the waste is fully recyclable, is only partly recyclable, or if it should not be recycled at all. Visual infographics are also displayed in order to easily inform the user of the reasoning behind the decision.
+
+## Installation and Usage
+
+To use begin with cloning the repository from GitHub, install requirments, and run the Streamlit application.
+
+```cmd
+git clone https://github.com/frankchang1000/PlasticPal.git
+python -m venv venv 
+venv\Scripts\activate
+pip install --upgrade pip
+pip install -r requirements.txt
+streamlit run main.py
+```
 
 ## How we built it
 
