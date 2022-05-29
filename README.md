@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/frankchang1000/Poolesville/blob/main/docs/logo.png", width="250"/>
+  <img src="https://github.com/frankchang1000/Poolesville/blob/main/docs/logo.png", width="150"/>
 </p>
 
 # PlasticPal
