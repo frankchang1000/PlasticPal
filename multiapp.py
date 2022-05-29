@@ -41,6 +41,7 @@ class MultiApp:
         col1, col2, col3 = st.columns(3)
         with col2:
             st.image("./docs/logo.png", width=200)
+
         app = st.selectbox(
             '',
             self.apps,

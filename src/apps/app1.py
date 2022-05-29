@@ -14,6 +14,7 @@ MODEL = tf.keras.models.load_model("models/efficientnet_b0/model_final_101_recyc
 def app():      
     #st.write("Please connect your camera to begin scanning items")
     btn = st.camera_input("")
+    st.write("After taking a photo, use the dropdown to change to image classification")
     if btn:
         pred = open("users/pred.txt", "w")
         acc = open("users/acc.txt", "w")
