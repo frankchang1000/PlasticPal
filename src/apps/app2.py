@@ -1,7 +1,6 @@
 """
 Displays webpage with detected object and confidence.
 """
-
 import inflection
 import streamlit as st
 

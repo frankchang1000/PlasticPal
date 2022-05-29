@@ -1,7 +1,6 @@
 """
 Displays webpage for inputting an image.
 """
-
 import cv2
 
 import numpy as np
