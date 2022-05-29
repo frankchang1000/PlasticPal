@@ -39,7 +39,7 @@ Plastic Pal takes an image from a camera input, and feeds the image to our Effic
 
 ## Installation and Usage ⌨️🖱️
 
-To use begin with cloning the repository from GitHub, install requirments, and run the Streamlit application.
+To use begin with cloning the repository from GitHub, install the requirments, and run the Streamlit application.
 
 ```cmd
 git clone https://github.com/frankchang1000/PlasticPal.git
