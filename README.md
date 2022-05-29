@@ -50,6 +50,12 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
+### Tensorflow GPU Support
+
+To utilize the GPU for AI processing download the proper drivers for your model of GPU. If your GPU has a compute capability of at least 7.0, you can use mixed precision inference; otherwise, you can use float32. Any RTX card should support this feature.
+
+We utilized Tensorflow 2.9 which requires the latest version of the drivers for your Nvidia GPU.
+
 ## How we built it
 
 <p align="center">
@@ -77,3 +83,11 @@ Along with new techniques for creating efficient and accurate neural networks, w
 ## What's next for PlasticPal
 
 In the future, we hope to extend the classification complexity of PlasticPal to the different recycling numbers as well. Each number has a very specific material, and recycling methods only work for some of these materials. This would require a larger dataset with labels corresponding to the material, so that the neural network can learn the features of each type of plastic.
+
+## References
+
+[1] Tan, M., & Le, Q. (2019, May). Efficientnet: Rethinking model scaling for convolutional neural networks. In International conference on machine learning (pp. 6105-6114). PMLR.
+
+## License
+
+MIT License (MIT) Copyright (c) 2022 frankchang1000, IdeaKing, and the contributors.
