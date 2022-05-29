@@ -1,10 +1,10 @@
-# PlasticPal
-
-Promoting **proper** recycling with advanced AI.
-
 <p align="center">
   <img src="https://github.com/frankchang1000/Poolesville/blob/main/docs/logo.png", width="250"/>
 </p>
+
+# PlasticPal
+
+Promoting **proper** recycling with advanced AI.
 
 ## Purpose and Inspiration
 
@@ -16,13 +16,19 @@ According to the Environmental Protection Agency, almost 300 million tons of was
 
 ## What it does
 
-
+<p align="center">
+  <img src="https://github.com/frankchang1000/PlasticPal/blob/main/docs/slides/07.png", width="500"/>
+</p>
 
 PlasticPal uses computer vision to determine if an item is recyclable. Then, our end-user can properly dispose of the item, helping to improve the environment and our recycling conditions.
 
 Plastic Pal takes an image from a camera input, and feeds the image to our EfficientNet model. The neural network classifies the image into one of 101 different categories, and is able to determine if the waste is fully recyclable, is only partly recyclable, or if it should not be recycled at all. Visual infographics are also displayed in order to easily inform the user of the reasoning behind the decision.
 
 ## How we built it
+
+<p align="center">
+  <img src="https://github.com/frankchang1000/PlasticPal/blob/main/docs/slides/09.png", width="500"/>
+</p>
 
 Our backend is powered using the most recent version of Tensorflow, Tensorflow2.9. We incorporated optimizations to our backend server including mixed precision training and inference. Our neural network (EfficientNetv2) was slightly modified to be wider than normal to increase pattern recognition, and improve inference. The results were a resounding 95% accuracy on our private test set. Lastly, we utilized numerous web scraping techniques to advance, improve, and clean our large training dataset with over 10000 images. PlasticPal uses the most advanced technology available to solve the world’s leading problems.
 
@@ -36,7 +42,7 @@ At first, we attempted to web scrape the different recycling categories for each
 
 PlasticPal achieved an extremely high classification accuracy with almost 95% during training. Our model was able to accurately predict from the camera stream unlike our previous hackathon projects. Although our front-end is still not perfect, our skills in UI and front-end execution have shown great improvement.
 
-Our code management was also amazing in this project, as we created many folders for better organization. Our programs are well formatted, making for easy debugging as well as easy collaboration between multiple people working on the same file. 
+Our code management was also amazing in this project, as we created many folders for better organization. Our programs are well formatted, making for easy debugging as well as easy collaboration between multiple people working on the same file.
 
 ## What we learned
 
