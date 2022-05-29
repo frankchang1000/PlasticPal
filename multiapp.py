@@ -42,7 +42,7 @@ class MultiApp:
         with col2:
             st.image("./docs/logo.png", width=200)
         app = st.selectbox(
-            'Navigation',
+            '',
             self.apps,
             format_func=lambda app: app['title'])
 

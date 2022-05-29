@@ -12,7 +12,7 @@ from src.dictionary import *
 MODEL = tf.keras.models.load_model("models/efficientnet_b0/model_final_101_recycling_fp32")
 
 def app():      
-    st.write("Please connect your camera to begin scanning items")
+    #st.write("Please connect your camera to begin scanning items")
     btn = st.camera_input("")
     if btn:
         pred = open("users/pred.txt", "w")
